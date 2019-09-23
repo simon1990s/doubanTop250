@@ -4,6 +4,7 @@ from selenium import webdriver
 from douban.items import DoubanItem
 
 
+# 这里是后加的注释
 class Top250Spider(scrapy.Spider):
     name = 'top250'
     # allowed_domains = ['xxx']
@@ -56,3 +57,4 @@ class Top250Spider(scrapy.Spider):
                 self.url_number += 25
                 new_url = format(self.url % self.url_number)
                 yield scrapy.Request(url=new_url, callback=self.parse)
+				
